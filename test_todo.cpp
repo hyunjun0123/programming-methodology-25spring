@@ -43,7 +43,7 @@ TEST(TodoListTest, RemoveTask) {
 
     int count;
     const char** tasks = todo.get_pending_tasks(count);
-    ASSERT_EQ(count, 2);
+    ASSERT_EQ(count, 2); // This was the failing line
     EXPECT_STREQ(tasks[0], "A");
     EXPECT_STREQ(tasks[1], "C");
 
